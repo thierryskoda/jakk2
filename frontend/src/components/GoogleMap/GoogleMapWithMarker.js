@@ -34,7 +34,7 @@ const WrappedMap = withScriptjs(withGoogleMap(MapWithAMarker));
 const Map = ({ hosts, onMarkerClick }) => {
     return (
         <WrappedMap
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyB4BUaEXVyi3KTdMUrMH2UmWy8bdMc0Sd0`}
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_GEO_API_KEY}`}
             loadingElement={<div style={{ height: `100%`, width: "100%" }} />}
             containerElement={<div style={{ height: `400px` }} />}
             mapElement={<div style={{ height: `100%`, width: "100%" }} />}
